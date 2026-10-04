@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Is U.S. Electricity Actually Getting Cleaner?</title>
+<style>
+  :root { color-scheme: light; }
+  body {
+    margin:0; font-family: Arial, Helvetica, sans-serif; background:#f5f7f8;
+    color:#1f2933; line-height:1.55;
+  }
+  .wrap { max-width:980px; margin:auto; padding:28px 20px 60px; }
+  .hero, .card {
+    background:white; border-radius:18px; padding:30px; margin-bottom:22px;
+    box-shadow:0 7px 22px rgba(0,0,0,.06);
+  }
+  h1 { font-size:2.45rem; line-height:1.08; margin:8px 0 16px; }
+  h2 { margin-top:0; }
+  .eyebrow { font-size:.9rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; }
+  .lead { font-size:1.18rem; max-width:830px; }
+  .big {
+    margin:24px 0 4px; padding:20px 22px; border-left:6px solid #333;
+    background:#f7f7f5; border-radius:10px; font-size:1.45rem; font-weight:700;
+  }
+  .stats {
+    display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:22px;
+  }
+  .stat { background:#f6f7f5; border-radius:12px; padding:16px; }
+  .stat b { font-size:1.35rem; display:block; }
+  img { width:100%; height:auto; border-radius:10px; margin-top:8px; }
+  table { width:100%; border-collapse:collapse; margin-top:10px; }
+  th,td { padding:9px 7px; border-bottom:1px solid #ddd; text-align:left; }
+  th { background:#f1f3f2; }
+  .small { font-size:.91rem; color:#59636e; }
+  a { color:#164f86; }
+  @media (max-width:700px) { .stats { grid-template-columns:1fr; } h1 { font-size:2rem; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <section class="hero">
+    <div class="eyebrow">Econ 238 · SHOW ME · My Own Topic</div>
+    <h1>Is U.S. Electricity Actually Getting Cleaner?</h1>
+    <p class="lead">
+      “Cleaner electricity” can sound vague. I made it visible by holding the geographic scale constant
+      and comparing the U.S. grid in 2010 and 2023 using the same EPA eGRID framework.
+    </p>
+    <div class="big">
+      U.S. direct CO₂ emissions per megawatt-hour fell from
+      <strong>1,232</strong> to <strong>767 lb CO₂/MWh</strong> —
+      a decline of about <strong>38%</strong>.
+    </div>
+    <div class="stats">
+      <div class="stat"><b>44.8% → 16.1%</b>Coal share</div>
+      <div class="stat"><b>24.0% → 43.2%</b>Natural-gas share</div>
+      <div class="stat"><b>2.3% → 13.9%</b>Wind + solar share</div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>1. What changed in the generation mix?</h2>
+    <img src="generation_mix_2010_2023.png"
+         alt="Comparison of U.S. generation shares by major source in 2010 and 2023">
+    <p>
+      Coal fell dramatically. Natural gas rose. Wind and solar grew from a very small share to a visible part
+      of national generation. Nuclear remained large, while hydro changed relatively little.
+    </p>
+    <p>
+      Adding nuclear, hydro, wind, solar, biomass, and geothermal together, these non-fossil sources supplied
+      about <strong>29.8%</strong> of eGRID generation in 2010 and about
+      <strong>39.6%</strong> in 2023.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>2. Did the carbon rate actually move?</h2>
+    <img src="co2_emission_rate.png"
+         alt="U.S. eGRID carbon dioxide total output emission rate in 2010 and 2023">
+    <p>
+      Yes. EPA's national eGRID total output CO₂ rate dropped by about <strong>37.7%</strong>.
+      This is a direct operational-emissions measure: pounds of CO₂ emitted by generators per megawatt-hour
+      of net electricity generation.
+    </p>
+    <p>
+      The chart does not prove that one technology alone caused the decline. The mix changed in several ways at once:
+      much less coal, more natural gas, and substantially more wind and solar.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>3. Has the shift continued after 2023?</h2>
+    <p>
+      EIA's preliminary 2025 figures show that the broad transition continued. In 2025, natural gas generated
+      about <strong>41%</strong> of U.S. utility-scale electricity, coal about <strong>17%</strong>, nuclear about
+      <strong>18%</strong>, and renewables about <strong>24%</strong>. EIA also reports that wind plus solar,
+      including small-scale solar, supplied about <strong>19%</strong> of total net generation in 2025.
+    </p>
+    <p class="small">
+      I keep the main quantitative comparison at 2010 versus 2023 because EPA eGRID provides a directly comparable
+      national generation mix and output-emission-rate framework for both years. The 2025 EIA numbers are shown only
+      as a recent update, not mixed into the eGRID calculation.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>What “cleaner” means here</h2>
+    <p>
+      Here, “cleaner” means <strong>lower direct CO₂ emissions per unit of electricity generated</strong>.
+      It does not mean zero environmental impact. This comparison does not include full life-cycle emissions,
+      land use, mining, methane leakage upstream of a power plant, local air pollution, reliability, or electricity prices.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>The data</h2>
+    <table>
+      <thead><tr><th>Measure</th><th>2010</th><th>2023</th></tr></thead>
+      <tbody>
+        <tr><td>Coal share</td><td>44.8%</td><td>16.1%</td></tr>
+        <tr><td>Natural gas share</td><td>24.0%</td><td>43.2%</td></tr>
+        <tr><td>Nuclear share</td><td>19.6%</td><td>18.5%</td></tr>
+        <tr><td>Wind share</td><td>2.3%</td><td>10.0%</td></tr>
+        <tr><td>Solar share</td><td>0.03%</td><td>3.9%</td></tr>
+        <tr><td>CO₂ output rate</td><td>1,232.35 lb/MWh</td><td>767.2 lb/MWh</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Sources and reproducibility</h2>
+    <p>
+      <strong>U.S. EPA eGRID 2010 summary tables:</strong>
+      <a href="https://www.epa.gov/sites/default/files/2015-01/documents/egrid_9th_edition_v1-0_year_2010_summary_tables.pdf">
+      national resource mix and total output emission rate</a>.
+    </p>
+    <p>
+      <strong>U.S. EPA eGRID 2023 summary tables, Revision 2:</strong>
+      <a href="https://www.epa.gov/system/files/documents/2025-06/summary_tables_rev2.pdf">
+      national resource mix and total output emission rate</a>.
+    </p>
+    <p>
+      <strong>U.S. EIA 2025 update:</strong>
+      <a href="https://www.eia.gov/energyexplained/electricity/electricity-in-the-us-generation-capacity-and-sales.php">
+      U.S. generation shares</a> and
+      <a href="https://www.eia.gov/todayinenergy/detail.php?id=67367">
+      wind and solar generation</a>.
+    </p>
+    <p class="small">
+      The included <code>us_grid_2010_2023.csv</code> contains every value used in the charts, and
+      <code>calculation.py</code> reproduces the headline percentage changes.
+    </p>
+  </section>
+</div>
+</body>
+</html>

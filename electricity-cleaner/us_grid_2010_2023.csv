@@ -1,0 +1,13 @@
+metric,source,2010,2023,unit
+generation_share,Coal,44.7748,16.1,percent
+generation_share,Natural gas,23.9686,43.2,percent
+generation_share,Nuclear,19.5589,18.5,percent
+generation_share,Hydro,6.173,5.7,percent
+generation_share,Wind,2.2864,10.0,percent
+generation_share,Solar,0.029,3.9,percent
+generation_share,Biomass,1.3571,1.1,percent
+generation_share,Oil,1.0174,0.5,percent
+generation_share,Other fossil,0.3498,0.5,percent
+generation_share,Geothermal,0.3689,0.4,percent
+generation_share,Other,0.1162,0.1,percent
+co2_total_output_rate,U.S.,1232.35,767.2,lb_CO2_per_MWh
