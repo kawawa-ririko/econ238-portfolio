@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Food Miles: Distance Is Not the Whole Story</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f7f4;
+    color: #1f2933;
+    line-height: 1.55;
+  }
+  .wrap { max-width: 980px; margin: auto; padding: 28px 20px 56px; }
+  .hero {
+    background: white; padding: 34px; border-radius: 18px; margin-bottom: 24px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.06);
+  }
+  h1 { font-size: 2.35rem; line-height: 1.1; margin: 0 0 14px; }
+  h2 { margin-top: 34px; }
+  .lead { font-size: 1.2rem; max-width: 800px; }
+  .big {
+    font-size: 1.55rem; font-weight: 700; padding: 18px 22px; background: #fff;
+    border-left: 6px solid #444; border-radius: 10px; margin: 24px 0;
+  }
+  .card {
+    background: white; padding: 26px; border-radius: 16px; margin: 22px 0;
+    box-shadow: 0 6px 18px rgba(0,0,0,.05);
+  }
+  img { width: 100%; height: auto; border-radius: 10px; }
+  table { width: 100%; border-collapse: collapse; margin-top: 14px; }
+  th, td { padding: 10px 8px; border-bottom: 1px solid #ddd; text-align: left; }
+  th { background: #f1f1ed; }
+  .small { font-size: .93rem; color: #52606d; }
+  a { color: #205493; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <section class="hero">
+    <div class="small">Econ 238 · SHOW ME · FOOD-57</div>
+    <h1>Food Miles: Distance Is Not the Whole Story</h1>
+    <p class="lead">
+      “Local food” is often treated as automatically low-carbon. But moving the same food the same distance
+      can produce radically different emissions depending on <strong>how</strong> it moves.
+    </p>
+    <div class="big">
+      One tonne moved 100 km by long-haul air freight produces about the same transport emissions
+      as moving it <strong>5579 km by an average container ship</strong>.
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>1. Hold the food and distance constant</h2>
+    <p>
+      I hold the shipment fixed at <strong>1 tonne of food</strong> and the distance fixed at
+      <strong>1,000 km</strong>. The only thing that changes is the transport mode.
+    </p>
+    <img src="emissions_1000km.png" alt="Transport emissions for one tonne of food moved 1000 km by five modes">
+    <p>
+      Air freight and small-truck delivery are far more emissions-intensive per tonne-kilometer than a full-size
+      articulated truck, rail, or container shipping. So “food miles” by themselves hide a major part of the story.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>2. Put distance back into scale</h2>
+    <p>
+      Next I ask a different question: <strong>how far could each mode move one tonne of food using the same
+      emissions as 100 km of long-haul air freight?</strong>
+    </p>
+    <img src="equivalent_distance.png" alt="Equivalent distance by mode for the emissions of 100 km of air freight">
+    <p>
+      The answer ranges from only about <strong>142 km</strong>
+      in a small diesel delivery vehicle to about <strong>5579 km</strong>
+      by container ship.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>The numbers</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Mode</th>
+          <th>2026 factor<br>(kg CO₂e / tonne-km)</th>
+          <th>1 tonne × 1,000 km<br>(kg CO₂e)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Small truck (diesel van ≤3.5 t)</td><td>0.63511</td><td>635.11</td></tr>
+        <tr><td>Semi truck (articulated HGV)</td><td>0.07926</td><td>79.26</td></tr>
+        <tr><td>Rail freight</td><td>0.02583</td><td>25.83</td></tr>
+        <tr><td>Container ship (average)</td><td>0.01612</td><td>16.12</td></tr>
+        <tr><td>Air freight (long-haul, incl. RF)</td><td>0.89939</td><td>899.39</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>What this does — and does not — show</h2>
+    <p>
+      This is a mode-comparison exercise, not a full life-cycle assessment of food. It holds the food itself constant
+      and looks only at transport. Production method, refrigeration, storage, waste, packaging, and seasonal growing
+      conditions can all matter too.
+    </p>
+    <p>
+      The tonne-km factors are national-average comparison factors, not measurements of a particular truck, train,
+      ship, or aircraft. Load factor, route, vehicle size, refrigeration, and empty running can change real-world results.
+    </p>
+    <p class="small">
+      Boundary note: the ground/sea/rail factors shown here are from the UK DESNZ 2026 “Freighting goods” table
+      (TTW / transport-operation emissions). The long-haul air factor used here includes radiative forcing (RF), so that
+      assumption should stay visible when interpreting the comparison.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>Method</h2>
+    <p><strong>Formula:</strong> emissions = weight (tonnes) × distance (km) × emission factor (kg CO₂e / tonne-km).</p>
+    <p>
+      I used a diesel van ≤3.5 t as the “small truck” case and a non-refrigerated articulated HGV at average load
+      as the “semi truck” case.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>Source</h2>
+    <p>
+      UK Department for Energy Security and Net Zero (DESNZ), <em>Greenhouse gas reporting: conversion factors 2026</em>,
+      “Freighting goods” table:
+      <a href="https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2026">
+        official 2026 conversion factors
+      </a>.
+    </p>
+    <p class="small">
+      Reproducibility files included with this exhibit: <code>transport_factors.csv</code> and <code>calculation.py</code>.
+    </p>
+  </section>
+</div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+mode,kg_CO2e_per_tonne_km_TTW,kg_CO2e_for_1_tonne_1000km,km_for_same_emissions_as_100km_air
+Small truck (diesel van ≤3.5 t),0.63511,635.11,141.6
+Semi truck (articulated HGV),0.07926,79.26,1134.7
+Rail freight,0.02583,25.83,3482.0
+Container ship (average),0.01612,16.12,5579.3
+"Air freight (long-haul, incl. RF)",0.89939,899.39,100.0
